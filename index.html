@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace | Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="[w3.org](http://www.w3.org/2000/svg)" aria-hidden="true">
+    <symbol id="grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-6v-7H9v7H3Z"/></symbol>
+    <symbol id="user" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3"/></symbol>
+    <symbol id="message" viewBox="0 0 24 24"><path d="M3 3h18v14H8l-5 4Z"/><path d="M7 8h10M7 12h7"/></symbol>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="tasks" viewBox="0 0 24 24"><path d="m3 6 2 2 4-4m3 2h9M3 13l2 2 4-4m3 2h9M3 20l2 2 4-4m3 2h9"/></symbol>
+    <symbol id="people" viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6m3 4a6 6 0 0 1 3 5v2"/></symbol>
+    <symbol id="settings" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="2"/><circle cx="16" cy="12" r="2"/><circle cx="10" cy="18" r="2"/></symbol>
+    <symbol id="help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9a3 3 0 1 1 5 2c-2 1-2 2-2 3m0 3h.01"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="bell" viewBox="0 0 24 24"><path d="M5 17h14l-2-3V9a5 5 0 0 0-10 0v5Zm5 3h4"/></symbol>
+    <symbol id="star" viewBox="0 0 24 24"><path d="m12 3 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z"/></symbol>
+    <symbol id="eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="5" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8 10 7-4M8 14l7 4"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <a class="brand" href="#main"><svg class="icon"><use href="#grid"/></svg>workspace<span class="brand-dot">.</span></a>
+      <p class="nav-caption">WORKSPACE</p>
+      <nav aria-label="Main navigation" class="navigation">
+        <a class="nav-link active" href="#main" aria-current="page"><svg class="icon"><use href="#home"/></svg>Dashboard</a>
+        <button class="nav-link" data-demo="Profile"><svg class="icon"><use href="#user"/></svg>Profile</button>
+        <button class="nav-link" data-demo="Messages"><svg class="icon"><use href="#message"/></svg>Messages<span class="nav-count">4</span></button>
+        <button class="nav-link" data-demo="History"><svg class="icon"><use href="#clock"/></svg>History</button>
+        <button class="nav-link" data-demo="Tasks"><svg class="icon"><use href="#tasks"/></svg>Tasks</button>
+        <button class="nav-link" data-demo="Communities"><svg class="icon"><use href="#people"/></svg>Communities</button>
+      </nav>
+      <p class="nav-caption secondary-caption">PREFERENCES</p>
+      <nav aria-label="Preferences" class="navigation">
+        <button class="nav-link" data-demo="Settings"><svg class="icon"><use href="#settings"/></svg>Settings</button>
+        <button class="nav-link" data-demo="Support"><svg class="icon"><use href="#help"/></svg>Support</button>
+        <button class="nav-link" data-demo="Privacy"><svg class="icon"><use href="#shield"/></svg>Privacy</button>
+      </nav>
+      <div class="sidebar-note"><span class="status-dot"></span> A little progress, every day.<p>Make room for your next big idea.</p></div>
+    </aside>
+
+    <header class="header">
+      <div class="header-top">
+        <form class="search" role="search"><label for="project-search" class="visually-hidden">Search projects</label><svg class="icon"><use href="#search"/></svg><input id="project-search" type="search" placeholder="Search your projects..." autocomplete="off"><kbd>/</kbd></form>
+        <div class="user-menu"><button class="icon-button notification" aria-label="Notifications" data-demo="Notifications"><svg class="icon"><use href="#bell"/></svg><span></span></button><span class="avatar avatar-small" aria-hidden="true">JD</span><span class="user-name">Jamie Davis</span></div>
+      </div>
+      <div class="header-bottom">
+        <div class="greeting"><span class="avatar avatar-large" aria-hidden="true">JD</span><div><p>Good to see you again,</p><h1>Jamie Davis <span>(@jamie)</span></h1></div></div>
+        <div class="header-actions"><button class="button button-primary" id="new-project"><svg class="icon"><use href="#plus"/></svg>New project</button><button class="button" data-demo="Upload">Upload</button><button class="button" data-demo="Share workspace">Share</button></div>
+      </div>
+    </header>
+
+    <main id="main" class="main-content">
+      <section class="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><h2 id="projects-title">Your projects <span id="project-count">6</span></h2><span class="muted">Your ideas, taking shape</span></div>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card" data-title="Design system"><div class="card-top"><span class="tag tag-purple">DESIGN</span><span class="project-number">01</span></div><h3>Design system</h3><p>A shared visual language for everything we build. Bringing components, colors, and patterns together.</p><div class="card-footer"><span class="project-state"><i></i> In progress</span><div class="card-actions"><button class="icon-button favorite" aria-label="Favorite Design system" aria-pressed="false"><svg class="icon"><use href="#star"/></svg></button><button class="icon-button preview" aria-label="Preview Design system"><svg class="icon"><use href="#eye"/></svg></button><button class="icon-button share" aria-label="Share Design system"><svg class="icon"><use href="#share"/></svg></button></div></div></article>
+          <article class="project-card" data-title="Portfolio refresh"><div class="card-top"><span class="tag tag-blue">DEVELOPMENT</span><span class="project-number">02</span></div><h3>Portfolio refresh</h3><p>A new home for the work that matters. A simple, thoughtful portfolio with a little personality.</p><div class="card-footer"><span class="project-state"><i></i> In progress</span><div class="card-actions"><button class="icon-button favorite" aria-label="Favorite Portfolio refresh" aria-pressed="false"><svg class="icon"><use href="#star"/></svg></button><button class="icon-button preview" aria-label="Preview Portfolio refresh"><svg class="icon"><use href="#eye"/></svg></button><button class="icon-button share" aria-label="Share Portfolio refresh"><svg class="icon"><use href="#share"/></svg></button></div></div></article>
+          <article class="project-card" data-title="Reading room"><div class="card-top"><span class="tag tag-green">PERSONAL</span><span class="project-number">03</span></div><h3>Reading room</h3><p>A cozy corner of the internet to track good books, save favorite passages, and find your next read.</p><div class="card-footer"><span class="project-state planning"><i></i> Planning</span><div class="card-actions"><button class="icon-button favorite" aria-label="Favorite Reading room" aria-pressed="false"><svg class="icon"><use href="#star"/></svg></button><button class="icon-button preview" aria-label="Preview Reading room"><svg class="icon"><use href="#eye"/></svg></button><button class="icon-button share" aria-label="Share Reading room"><svg class="icon"><use href="#share"/></svg></button></div></div></article>
+          <article class="project-card" data-title="Habit garden"><div class="card-top"><span class="tag tag-green">PERSONAL</span><span class="project-number">04</span></div><h3>Habit garden</h3><p>Small steps grow into something bigger. A gentle habit tracker that celebrates showing up.</p><div class="card-footer"><span class="project-state complete"><i></i> Complete</span><div class="card-actions"><button class="icon-button favorite" aria-label="Favorite Habit garden" aria-pressed="false"><svg class="icon"><use href="#star"/></svg></button><button class="icon-button preview" aria-label="Preview Habit garden"><svg class="icon"><use href="#eye"/></svg></button><button class="icon-button share" aria-label="Share Habit garden"><svg class="icon"><use href="#share"/></svg></button></div></div></article>
+          <article class="project-card" data-title="Studio landing page"><div class="card-top"><span class="tag tag-purple">DESIGN</span><span class="project-number">05</span></div><h3>Studio landing page</h3><p>A welcoming first impression for an independent creative studio. Bold type, clean lines, and good stories.</p><div class="card-footer"><span class="project-state"><i></i> In progress</span><div class="card-actions"><button class="icon-button favorite" aria-label="Favorite Studio landing page" aria-pressed="false"><svg class="icon"><use href="#star"/></svg></button><button class="icon-button preview" aria-label="Preview Studio landing page"><svg class="icon"><use href="#eye"/></svg></button><button class="icon-button share" aria-label="Share Studio landing page"><svg class="icon"><use href="#share"/></svg></button></div></div></article>
+          <article class="project-card" data-title="Weather, simply"><div class="card-top"><span class="tag tag-blue">DEVELOPMENT</span><span class="project-number">06</span></div><h3>Weather, simply</h3><p>Just the forecast you need, without the clutter. Exploring a calmer way to plan the day ahead.</p><div class="card-footer"><span class="project-state planning"><i></i> Planning</span><div class="card-actions"><button class="icon-button favorite" aria-label="Favorite Weather, simply" aria-pressed="false"><svg class="icon"><use href="#star"/></svg></button><button class="icon-button preview" aria-label="Preview Weather, simply"><svg class="icon"><use href="#eye"/></svg></button><button class="icon-button share" aria-label="Share Weather, simply"><svg class="icon"><use href="#share"/></svg></button></div></div></article>
+        </div>
+        <p id="empty-state" hidden>No projects match your search.</p>
+      </section>
+
+      <aside class="right-column" aria-label="Workspace updates">
+        <section aria-labelledby="announcements-title"><div class="section-heading"><h2 id="announcements-title">Announcements</h2><span class="tiny-dot"></span></div><div class="panel announcements"><article><span class="eyebrow">WORKSPACE NEWS</span><h3>A fresh start</h3><p>Your new dashboard is here. A little more clarity, a lot more room for your ideas.</p></article><article><span class="eyebrow">COMMUNITY</span><h3>Show what you're building</h3><p>Share your latest project and exchange feedback with fellow makers.</p></article><article><span class="eyebrow">A FRIENDLY REMINDER</span><h3>Progress over perfection</h3><p>You don't have to finish it all today. Keep building, one small step at a time.</p></article></div></section>
+        <section aria-labelledby="trending-title"><div class="section-heading"><h2 id="trending-title">Trending</h2><span class="muted">This week</span></div><div class="panel trending"><div class="trend-person"><span class="avatar peach">AL</span><div><h3>@alex</h3><p>Open-source icon kit</p></div></div><div class="trend-person"><span class="avatar lilac">SK</span><div><h3>@sam</h3><p>The mindful journal</p></div></div><div class="trend-person"><span class="avatar mint">RM</span><div><h3>@robin</h3><p>A better recipe box</p></div></div><div class="trend-person"><span class="avatar yellow">CT</span><div><h3>@casey</h3><p>Weekend adventures</p></div></div></div></section>
+      </aside>
+      <footer class="page-footer">Made for making things.<span>Workspace / Dashboard</span></footer>
+    </main>
+  </div>
+
+  <dialog id="project-dialog"><form id="project-form"><div class="dialog-heading"><h2>Create a project</h2><button type="button" class="icon-button" id="close-dialog" aria-label="Close dialog">×</button></div><label for="project-name">Project name</label><input id="project-name" name="title" maxlength="70" required><label for="project-description">Description</label><textarea id="project-description" name="description" rows="4" maxlength="300" required></textarea><p class="muted">Demo projects are kept only until you reload the page.</p><button class="button button-primary" type="submit">Create project</button></form></dialog>
+  <dialog id="preview-dialog"><h2 id="preview-title"></h2><p id="preview-description"></p><button class="button" id="close-preview">Close preview</button></dialog>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
